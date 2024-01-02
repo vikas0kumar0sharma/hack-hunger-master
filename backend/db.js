@@ -1,6 +1,6 @@
-const mongoose=require('mongoose')
+require('dotenv').config({ override: true })
 
-const mongoURI='mongodb+srv://svikaskumar23:vikas123@cluster0.ie0lktu.mongodb.net/gofoodmern?retryWrites=true&w=majority'
+const mongoURI=process.env.MONGO_URI
 
 const mongoDb=async()=>{
     await mongoose.connect(mongoURI,async(err,result)=>{
