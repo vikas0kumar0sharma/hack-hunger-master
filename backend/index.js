@@ -1,6 +1,7 @@
+require('dotenv').config({ override: true })
 const express=require('express')
 const app=express()
-const PORT=5000
+const PORT=const PORT=process.env.PORT
 const mongoDb=require('./db')
 const cors=require('cors')
 const bodyParser=require('body-parser')
